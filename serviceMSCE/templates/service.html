@@ -1,0 +1,131 @@
+{% extends 'home.html' %}
+
+
+{% block description %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.description }}
+
+{% endblock description %}
+
+{% block title %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.title }}|Services
+
+{% endblock title %}
+
+
+{% block container %}
+{% load static %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+<section class="page-header padding" style="background-image: url({{setting.ImageUrl}});">
+    <div class="container">
+        <div class="page-content text-center">
+            <h2>Our services</h2>
+            <p>{{setting.title}}.</p>
+        </div>
+    </div>
+</section>
+<section class="service-section bg-grey padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="service-carousel" class="service-carousel box-shadow owl-carousel">
+                    
+                    {% for p in services %}
+                              
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="{{p.titleicon}}"></i>
+                        </div>
+                        <h3>{{p.title}}</h3>
+                        <p>{{p.details}}</p>
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="overlay-icon">
+                            <i class="{{p.titleicon}}"></i>
+                        </div>
+                    </div>
+                    {% endfor %}
+                  
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonial-section bg-grey padding">
+    <div class="dots"></div>
+    <div class="container">
+        <div class="section-heading text-center mb-40 wow fadeInUp" data-wow-delay="100ms">
+            <span>Testimonial</span>
+            <h2>What people says</h2>
+        </div>
+        <div id="testimonial-carousel" class="testimonial-carousel box-shadow owl-carousel">
+            <div class="testi-item d-flex align-items-center">
+                <img src="img/testi-1.jpg" alt="img">
+                <div class="testi-content">
+                    <p>"Thank you for guiding us through the construction process, understanding, and always ready
+                        to accommodate our needs. We love our new space and know that it was built by the very
+                        best!"</p>
+                    <h3>Kyle Frederick</h3>
+                    <ul class="rattings">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                    <span>Director</span>
+                </div>
+                <i class="fa fa-quote-right"></i>
+            </div>
+            <div class="testi-item d-flex align-items-center">
+                <img src="img/testi-2.jpg" alt="img">
+                <div class="testi-content">
+                    <p>"Thank you for guiding us through the construction process, understanding, and always ready
+                        to accommodate our needs. We love our new space and know that it was built by the very
+                        best!"</p>
+                    <h3>Valentin Lacoste</h3>
+                    <ul class="rattings">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                    <span>Director</span>
+                </div>
+                <i class="fa fa-quote-right"></i>
+            </div>
+            <div class="testi-item d-flex align-items-center">
+                <img src="img/testi-3.jpg" alt="img">
+                <div class="testi-content">
+                    <p>"Thank you for guiding us through the construction process, understanding, and always ready
+                        to accommodate our needs. We love our new space and know that it was built by the very
+                        best!"</p>
+                    <h3>José Carpio</h3>
+                    <ul class="rattings">
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fa fa-star"></i></li>
+                    </ul>
+                    <span>Director</span>
+                </div>
+                <i class="fa fa-quote-right"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock container %}
+
+{% block sponser %}
+{% include 'homesponser.html' %}
+{% endblock sponser %}

@@ -1,0 +1,66 @@
+{% extends 'home.html' %}
+
+
+{% block description %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.description }}
+{% endblock description %}
+
+{% block title %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.title }}
+{% endblock title %}
+
+<!-- slider start -->
+
+{% block slider %}
+{% include 'homeslider.html' %}
+{% endblock slider %}
+
+<!-- slider end -->
+<!-- about section start -->
+
+{% block about %}
+{% include 'homeabout.html' %}
+{% endblock about %}
+
+<!-- about section end -->
+<!-- service section start -->
+
+{% block service %}
+{% include 'homeservices.html' %}
+{% endblock service %}
+
+<!-- service section end -->
+<!-- project section start -->
+
+{% block project %}
+{% include 'homeprojects.html' %}
+{% endblock project %}
+
+<!-- project section end -->
+<!-- clientsay section start -->
+
+{% block clientsay %}
+{% include 'homeclientsays.html' %}
+{% endblock clientsay %}
+
+<!-- clientsay section end -->
+<!-- news section start -->
+
+{% block news %}
+{% include 'homenews.html' %}
+{% endblock news %}
+
+<!-- news section end -->
+<!-- sponser section start -->
+
+{% block sponser %}
+{% include 'homesponser.html' %}
+{% endblock sponser %}
+
+<!-- sponser section end -->

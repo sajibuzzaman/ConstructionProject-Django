@@ -1,0 +1,67 @@
+{% load static %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+<header class="header">
+    <div class="primary-header navbar-default navbar-fixed-top">
+        <div class="container text-center">
+            <ul class="list-inline">
+                <li><a href="faq-1.html"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
+                <li><a href="javascript:;"><i class="fa fa-envelope-o"></i>mscebd.com@gmail.com</a></li>
+                <li>Contact :01683142143</li>
+            </ul>
+        </div>
+
+
+        <div class="container">
+            <div class="primary-header-inner">
+                <div class="header-logo">
+                    <a href="{% url 'home' %}"><img src="{{ setting.logo.url }}" alt="Indico"></a>
+                </div>
+                <div class="header-menu-wrap">
+                    <ul class="dl-menu">
+                        <li><a href="{% url 'home' %}">Home</a>
+
+                        </li>
+                        <li><a href="{% url 'about' %}">About</a>
+
+                        </li>
+                        <li><a href="{% url 'services' %}">Services</a>
+
+                        </li>
+                        <li><a href="#">Pages</a>
+                            <ul>
+                                <li><a href="{% url 'projects' %}">Our Projects</a></li>
+                                <li><a href="project-single.html">Project Single</a></li>
+                                <li><a href="{% url 'team' %}">Our Team</a></li>
+                                <li><a href="testimonial.html">Testimonial</a></li>
+                                <li><a href="404.html">404 Error</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Blog</a>
+                            <ul>
+                                <li><a href="blog-grid.html">Blog Grid</a></li>
+                                <li><a href="blog-classic.html">Blog Classic</a></li>
+                                <li><a href="blog-single.html">Blog Single</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="{% url 'books' %}">BookStore</a></li>
+                        <li><a href="{% url 'Contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="header-right">
+                    <a class="menu-btn" href="#">Request a Quote</a>
+
+                    <div class="mobile-menu-icon">
+                        <div class="burger-menu">
+                            <div class="line-menu line-half first-line"></div>
+                            <div class="line-menu"></div>
+                            <div class="line-menu line-half last-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

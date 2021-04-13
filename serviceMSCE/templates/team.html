@@ -1,0 +1,69 @@
+{% extends 'home.html' %}
+
+
+{% block description %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.description }}
+
+{% endblock description %}
+
+{% block title %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.title }}|Services
+
+{% endblock title %}
+
+
+{% block container %}
+{% load static %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+<section class="page-header padding" style="background-image: url({{setting.ImageUrl}});">
+    <div class="container">
+        <div class="page-content text-center">
+            <h2>Specialized team</h2>
+            <p>{{setting.title}}.</p>
+        </div>
+    </div>
+</section>
+<section class="team-section bg-gray padding">
+    <div class="dots"></div>
+    <div class="container">
+        <div class="row team-wrap box-shadow">
+
+            
+            {% for p in team %}
+            <div class="col-lg-3 col-sm-6 padding-15">
+                <div class="team-item">
+                    <div class="overlay"></div>
+                    <img src="{{ p.image.url }}" alt="team">
+                    <div class="team-content">
+                        <h3>{{p.name}}</h3>
+                        <span>{{p.sp_category}}</span>
+                    </div>
+                    <ul class="team-social">
+                        <li><a href="{{p.facebook_url}}"><i class="ti-facebook"></i></a></li>
+                        <li><a href="{{p.twitter_url}}"><i class="ti-twitter"></i></a></li>
+                        <li><a href="{{p.instagram_url}}"><i class="ti-instagram"></i></a></li>
+                        <li><a href="{{p.youtube_url}}"><i class="ti-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+                
+
+    
+        </div>
+    </div>
+</section>
+
+{% endblock container %}
+
+{% block sponser %}
+{% include 'homesponser.html' %}
+{% endblock sponser %}

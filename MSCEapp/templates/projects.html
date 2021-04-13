@@ -1,0 +1,59 @@
+{% extends 'home.html' %}
+
+
+{% block description %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.description }}
+
+{% endblock description %}
+
+{% block title %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.title }}|Services
+
+{% endblock title %}
+
+
+{% block container %}
+{% load static %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+<section class="page-header padding" style="background-image: url({{setting.ImageUrl}});">
+    <div class="container">
+        <div class="page-content text-center">
+            <h2>Specialized projects</h2>
+            <p>{{setting.title}}late.</p>
+        </div>
+    </div>
+</section>
+<section class="projects-section padding">
+    <div class="container">
+        <div class="row">
+            
+            {% for p in projects %}
+            <div class="col-lg-4 col-sm-6 padding-15">
+                <div class="project-item">
+                    <img src="{{p.image.url}}" style="height: 450px;" alt="projects">
+                    <div class="overlay"></div>
+                    <a href="{{p.image.url}}" class="view-icon ajax-popup-link"> <i class="fas fa-expand"></i></a>
+                    <div class="projects-content">
+                        <a href="#" class="category">{{ p.category }}</a>
+                        <h3><a href="{% url 'project_single' p.slug %}" class="tittle">{{ p.title }}</a></h3>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+                             
+        </div>
+    </div>
+</section>
+
+{% endblock container %}
+
+{% block sponser %}
+{% include 'homesponser.html' %}
+{% endblock sponser %}

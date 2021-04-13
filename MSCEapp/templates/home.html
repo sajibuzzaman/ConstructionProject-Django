@@ -1,0 +1,149 @@
+{% load static %}
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description %}{% endblock description %}">
+    <meta name="author" content="AlexaTheme">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '' %}img/favicon.png">
+
+    <link rel="stylesheet" href="{% static '' %}css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/themify-icons.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/elegant-line-icons.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/elegant-font-icons.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/flaticon.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/animate.min.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/slick.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/slider.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/odometer.min.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/venobox/venobox.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/owl.carousel.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/main.css">
+
+    <link rel="stylesheet" href="{% static '' %}css/responsive.css">
+    <script src="{% static '' %}js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    
+    <div class="site-preloader-wrap">
+        <div class="spinner"></div>
+    </div>
+ <!-- header start -->
+ {% include 'header.html' %}
+ <!-- header end -->
+
+ 
+
+     
+
+   <!-- slider start -->
+   
+   {% block slider %}
+       
+   {% endblock slider %}
+   
+   {% block container %}
+     
+   {% endblock container %}
+       
+   <!-- slider end -->
+  <!-- about section start -->
+  
+  {% block about %}
+      
+  {% endblock about %}
+      
+  <!-- about section end -->
+  <!-- service section start -->
+  
+  {% block service %}
+      
+  {% endblock service %}
+      
+  <!-- service section end -->
+ <!-- project section start -->
+
+{% block project %}
+    
+{% endblock project %}
+    
+ <!-- project section end -->
+   <!-- clientsay section start -->
+   
+   {% block clientsay %}
+       
+   {% endblock clientsay %}
+       
+   <!-- clientsay section end -->
+    <!-- news section start -->
+    
+    {% block news %}
+        
+    {% endblock news %}
+        
+    <!-- news section end -->
+   <!-- sponser section start -->
+   
+   {% block sponser %}
+       
+   {% endblock sponser %}
+       
+   <!-- sponser section end -->
+  <!-- footer start -->
+  {% include 'footer.html' %}
+  <!-- footer end -->
+    <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
+
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static '' %}js/vendor/jquery-1.12.4.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/bootstrap.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/tether.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/headroom.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/owl.carousel.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/smooth-scroll.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/venobox.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/jquery.ajaxchimp.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/slick.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/waypoints.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/odometer.min.js"></script>
+
+    <script src="{% static '' %}js/vendor/wow.min.js"></script>
+
+    <script src="{% static '' %}js/main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,82 @@
+{% extends 'home.html' %}
+
+
+{% block description %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.description }}
+
+{% endblock description %}
+
+{% block title %}
+{% load MSCEtag %}
+{% MSCE_set as setting %}
+
+{{ setting.title }}|Product-Single
+
+{% endblock title %}
+
+
+{% block slider %}
+{% include 'projectslider.html' %}
+{% endblock slider %}
+
+
+{% block container %}
+{% load static %}    
+    
+
+<section class="project-single-section padding">
+    <div class="container">
+        <div class="row project-single-wrap align-items-center">
+            <div class="col-md-6 sm-padding">
+                <div id="project-single-carousel" class="project-single-carousel box-shadow owl-carousel">
+                    
+                
+                {% if images %}
+                    {% for p in images %}
+                    <div class="single-carousel">
+                        <img src="{{p.image.url}}" alt="img">
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="single-carousel">
+                        <img src="{{single_project.image.url}}" style="height: 450px;" alt="img">
+                    </div>
+                    <div class="single-carousel">
+                        <img src="{{single_project.image.url}}" style="height: 450px;" alt="img">
+                    </div>
+                {% endif %}
+        
+                    
+                    
+                   
+                        
+                 
+                  
+                </div>
+            </div>
+            <div class="col-md-6 sm-padding">
+                <div class="project-single-content">
+                    <h2>{{ single_project.title }}</h2>
+                    <p>{{ single_project.detail }}</p>
+                    <ul class="project-details">
+                        <li><span>Architects</span>: José Carpio, Valentin Lacoste, Kyle Frederick</li>
+                        <li><span>Location</span>: 962 Fifth Avenue, 3rd Floor New York.</li>
+                        <li><span>Category</span>: {{ single_project.category }}.</li>
+                        <li><span>Area</span>: 119.0.563</li>
+                        <li><span>Project Year</span>: 2019/2020</li>
+                        <li><span>Manufactures</span>: AlexaTheme construction company.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock container %}
+
+{% block sponser %}
+{% include 'homesponser.html' %}
+{% endblock sponser %}
